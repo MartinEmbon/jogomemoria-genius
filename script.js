@@ -48,7 +48,8 @@ let checkOrder = () => {
         nextLevel();
     }
 }
-//funcao para o click de usuario
+
+//funcao para o clique do usuario
 let click = (color) => {
     clickedOrder[clickedOrder.length] = color;
     createColorElement(color).classList.add('selected');
@@ -60,7 +61,6 @@ let click = (color) => {
 }
 
 //funcao que retorna a cor
-
 let createColorElement = (color) => {
     if(color == 0) {
         return green;
@@ -88,26 +88,23 @@ let gameOver = () => {
     playGame();
 }
 
-let playGame = () => {
-    alert("Bemvindo ao Génius.  Iniciando novo jogo!")
+//funcao de inicio do jogo
+let playGame = () => {    
+    Swal.fire(
+        'Bem vindo ao Gênesis!',
+        'Sucesso!'        
+      )
     score = 0;
-    nextLevel()
+
+    nextLevel();
 }
 
+//eventos de clique para as cores
 green.onclick = () => click(0);
 red.onclick = () => click(1);
 yellow.onclick = () => click(2);
 blue.onclick = () => click(3);
 
 
-
-
-/*
-green.addEventListener("click",click(0))
-red.addEventListener("click",click(1))
-yellow.addEventListener("click",click(2))
-blue.addEventListener("click",click(3))
-*/
-playGame()
-
-
+//inicio do jogo
+playGame();
