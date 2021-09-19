@@ -1,4 +1,4 @@
-# jogomemoria-genius
+# Genius, the game
 ##
 Projeto para Bootcamp Eduzz na DIO:
 
